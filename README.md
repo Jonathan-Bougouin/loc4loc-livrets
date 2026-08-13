@@ -30,8 +30,9 @@ aucun moyen de les corriger à distance.
 2. Remplacer le fichier à la racine, **au même nom exact**.
 3. Commiter et pousser sur `main`.
 
-Le déploiement est automatique (workflow `.github/workflows/pages.yml`) et prend
-environ une minute. L'URL reste identique — les QR imprimés restent valables.
+La publication est automatique : GitHub Pages sert la branche `main` et se
+rafraîchit environ une minute après le push. L'URL reste identique — les QR
+imprimés restent valables.
 
 ### Ajouter un nouveau livret
 
@@ -43,6 +44,12 @@ bien l'URL exacte.
 
 ## Contraintes techniques du dispositif
 
+- La publication repose sur **GitHub Pages en mode « Deploy from a branch »**,
+  branche `main`, dossier `/ (root)` — réglage à conserver tel quel
+  (Settings → Pages). Aucun workflow n'est nécessaire : c'est volontaire, pour
+  que le dispositif ne dépende d'aucune brique susceptible de casser.
+- Le fichier `.nojekyll` désactive le moteur Jekyll et garantit que les PDF sont
+  servis tels quels. **Ne pas le supprimer.**
 - Le dépôt doit rester **public** : GitHub Pages sur dépôt privé exige un plan payant.
 - Les PDF sont servis en `Content-Type: application/pdf`, sans page intermédiaire,
   sans redirection et sans authentification — le scan du QR ouvre directement le document.
