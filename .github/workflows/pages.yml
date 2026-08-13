@@ -1,0 +1,43 @@
+name: Publication des livrets sur GitHub Pages
+
+# Publie le contenu du dépôt tel quel : chaque PDF de la racine devient
+# accessible en direct à https://jonathan-bougouin.github.io/loc4loc-livrets/<nom>.pdf
+# Les noms de fichiers sont permanents (QR codes imprimés) — cf. README.md.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Configuration de Pages (activation si nécessaire)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Préparation de l'artefact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Déploiement
+        id: deployment
+        uses: actions/deploy-pages@v4
