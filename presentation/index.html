@@ -4,59 +4,61 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#121A2C">
 <title>LOC4LOC — Documents investisseurs</title>
 <style>
-  :root { --nuit:#121A2C; --nuit-2:#1e2a44; --or:#C9A85C; --gris:#5b6472; --bg:#f4f5f7; }
+  :root { --nuit:#121A2C; --nuit2:#1d2946; --or:#C9A85C; --jaune:#FFD400; --gris:#AEB7C6; --gris2:#7b8699; }
   * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { min-height:100%; }
   body {
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg); color:var(--nuit); line-height:1.5;
-    -webkit-font-smoothing:antialiased;
+    color:#fff; line-height:1.5; -webkit-font-smoothing:antialiased;
+    background:#121A2C;
+    background-image:radial-gradient(ellipse 120% 55% at 50% 48%, var(--nuit2) 0%, var(--nuit) 70%);
+    background-attachment:fixed;
   }
-  .wrap { max-width:680px; margin:0 auto; padding:0 20px 56px; }
-  header {
-    background:var(--nuit); color:#fff; text-align:center;
-    padding:48px 20px 40px; margin-bottom:28px;
-  }
-  .brand { font-size:26px; font-weight:700; letter-spacing:2px; }
+  .wrap { max-width:620px; margin:0 auto; padding:0 20px 48px; }
+  .rule { width:120px; height:2px; background:var(--or); margin:0 auto; }
+  header { text-align:center; padding:44px 20px 10px; }
+  .brand { font-size:52px; font-weight:800; letter-spacing:1px; line-height:1; margin-top:30px; }
   .brand span { color:var(--or); }
-  .tagline { margin-top:8px; font-size:13px; letter-spacing:1px; color:#b7c0d0; text-transform:uppercase; }
-  h1 { font-size:19px; font-weight:600; margin:28px 0 6px; }
-  .intro { color:var(--gris); font-size:14.5px; margin-bottom:22px; }
-  .card {
-    background:#fff; border:1px solid #e4e7ec; border-radius:14px;
-    padding:20px 20px 22px; margin-bottom:16px;
-    box-shadow:0 1px 2px rgba(18,26,44,.04);
+  .tagline { margin-top:12px; font-size:12px; letter-spacing:3px; color:var(--gris); text-transform:uppercase; }
+  .pill {
+    display:inline-block; margin:22px auto 0; background:var(--jaune); color:var(--nuit);
+    font-size:11.5px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase;
+    padding:10px 18px; border-radius:999px;
   }
-  .card h2 { font-size:16.5px; font-weight:650; color:var(--nuit); }
+  h1 { font-size:22px; font-weight:700; text-align:center; margin:40px 0 6px; }
+  .intro { color:var(--gris); font-size:14px; text-align:center; margin-bottom:26px; }
+  .card {
+    background:rgba(255,255,255,.04); border:1px solid rgba(201,168,92,.45);
+    border-radius:18px; padding:20px 20px 22px; margin-bottom:14px;
+    box-shadow:0 8px 24px rgba(0,0,0,.28);
+  }
+  .card h2 { font-size:17px; font-weight:700; color:#fff; }
   .card p { color:var(--gris); font-size:13.5px; margin:6px 0 16px; }
-  .meta { font-size:12px; color:#9aa2b1; margin-top:-2px; margin-bottom:14px; }
   .dl {
     display:flex; align-items:center; justify-content:center; gap:9px;
-    width:100%; background:var(--nuit); color:#fff; text-decoration:none;
-    font-size:15px; font-weight:600; padding:13px 18px; border-radius:10px;
-    transition:background .15s ease;
+    width:100%; background:var(--or); color:var(--nuit); text-decoration:none;
+    font-size:15px; font-weight:800; padding:13px 18px; border-radius:12px;
+    transition:filter .15s ease;
   }
-  .dl:hover { background:var(--nuit-2); }
+  .dl:hover { filter:brightness(1.08); }
   .dl svg { width:18px; height:18px; flex:none; }
-  footer { text-align:center; color:#9aa2b1; font-size:12px; margin-top:34px; line-height:1.7; }
-  footer strong { color:var(--gris); }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#0c1120; }
-    body { color:#e8ebf1; }
-    .card { background:#161f33; border-color:#263251; box-shadow:none; }
-    .card h2 { color:#f3f5f9; }
-    .card p, .intro { color:#9aa6ba; }
-    .dl { background:#24324f; }
-    .dl:hover { background:#2d3e61; }
-  }
+  .wink { text-align:center; color:var(--gris); font-style:italic; font-size:14px; margin-top:34px; }
+  .url { text-align:center; color:var(--gris); font-size:12.5px; margin-top:10px; word-break:break-all; }
+  footer { text-align:center; color:var(--gris2); font-size:11.5px; margin-top:26px; line-height:1.7; }
+  footer .rule { margin-bottom:16px; width:80px; }
 </style>
 </head>
 <body>
   <header>
+    <div class="rule"></div>
     <div class="brand">LOC<span>4</span>LOC</div>
     <div class="tagline">Locations premium · Côte Atlantique</div>
+    <div class="pill">Présents à BIG · Bpifrance Inno Génération</div>
   </header>
+
   <div class="wrap">
     <h1>Documents investisseurs</h1>
     <p class="intro">Téléchargez les supports de présentation du projet LOC4LOC. Documents au format PDF.</p>
@@ -65,7 +67,7 @@
       <h2>Deck investisseur</h2>
       <p>Présentation du projet, du modèle et de l'opportunité d'investissement.</p>
       <a class="dl" href="deck-investisseur.pdf" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Télécharger le PDF
       </a>
     </div>
@@ -74,7 +76,7 @@
       <h2>Prévisionnel 36 mois — présentation</h2>
       <p>Diaporama du prévisionnel sur 36 mois : trajectoire et hypothèses clés.</p>
       <a class="dl" href="previsionnel-diapo.pdf" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Télécharger le PDF
       </a>
     </div>
@@ -83,12 +85,15 @@
       <h2>Compte de résultat prévisionnel — 36 mois</h2>
       <p>Compte de résultat prévisionnel détaillé sur 36 mois.</p>
       <a class="dl" href="compte-resultat-previsionnel.pdf" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Télécharger le PDF
       </a>
     </div>
 
+    <p class="wink">Ravis de vous accueillir sur notre stand.</p>
+
     <footer>
+      <div class="rule"></div>
       <strong>LOC4LOC HOLDING</strong><br>
       Document confidentiel — réservé aux destinataires de ce lien.
     </footer>
